@@ -68,7 +68,7 @@ messageForm.addEventListener("submit",(event)=>{
 
 inputField.addEventListener("keyup",()=>{
     socket.emit("typing",{
-        isTyping : inputField.value.length>0,
+        isTyping : (inputField.value).trim().length > 0,
         name :userName
     })
 })
